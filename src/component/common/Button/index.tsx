@@ -4,10 +4,11 @@ import {ReactNode} from 'react';
 interface Props {
     children: ReactNode;
     type: 'primary' | 'secondary';
+    onClick?: () => void;
 }
-export default function Button({children, type}: Props) {
+export default function Button({children, type, onClick}: Props) {
   return (
-    <ButtonContainer type={type}>{children}</ButtonContainer>
+    <ButtonContainer type={type} onClick={onClick}>{children}</ButtonContainer>
   );
 }
 

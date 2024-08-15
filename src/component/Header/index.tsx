@@ -1,23 +1,28 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 import {Button} from '@/component';
+import Link from 'next/link';
+import {useRouter} from 'next/navigation';
 
 export default function Header() {
+  const router = useRouter();
   return (
     <HeaderContainer>
       <SideContainer>
-        <Image src='/LOGO.png' alt='로고' width={158} height={60}/>
+        <Link href={'/'}>
+          <Image src='/LOGO.png' alt='로고' width={158} height={60}/>
+        </Link>
 
         <Navs>
-          <Nav>과제</Nav>
-          <Nav>교육</Nav>
-          <Nav>채용</Nav>
+          <Link className="nav" href={'/assignment'}>과제</Link>
+          <Link className="nav" href={'/education'}>교육</Link>
+          <Link className="nav" href={'/job'}>채용</Link>
         </Navs>
       </SideContainer>
 
       <SideButtons>
-        <Button type={'secondary'}>로그인/회원가입</Button>
-        <Button type={'primary'}>기업서비스</Button>
+        <Button type={'secondary'} onClick={() => router.push('/login')}>로그인/회원가입</Button>
+        <Button type={'primary'} onClick={() => router.push('/business')}>기업서비스</Button>
       </SideButtons>
     </HeaderContainer>
   );
@@ -39,19 +44,18 @@ export const SideContainer = styled.div`
     gap: 80px;
 `;
 
-export const Navs = styled.ul`
+export const Navs = styled.div`
     display: flex;
     flex-direction: row;
     justify-items: center;
     gap: 80px;
     font-size: 15px;
     font-weight: 700;
-`;
 
-export const Nav = styled.li`
-    cursor: pointer;
-    list-style-type: none;
-    margin: auto;
+    .nav {
+        cursor: pointer;
+        margin: auto;
+    }
 `;
 
 export const SideButtons = styled.div`
