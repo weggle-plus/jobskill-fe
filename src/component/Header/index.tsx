@@ -36,8 +36,8 @@ export const SideContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-items: center;
-    gap: 20px;
-`
+    gap: 80px;
+`;
 
 export const Navs = styled.ul`
     display: flex;
