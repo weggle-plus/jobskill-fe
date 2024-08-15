@@ -1,7 +1,8 @@
-import type { Metadata } from 'next';
-import StyledComponentsRegistry from '../../lib/registry';
+import type {Metadata} from 'next';
+import StyledComponentsRegistry from '@/lib/registry';
 import React, {ReactNode} from 'react';
 import {Header} from '@/component';
+import '@/styles/reset.css';
 
 export const metadata: Metadata = {
   title: 'JobSkill',
@@ -11,16 +12,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+    children: ReactNode;
 }>) {
   return (
     <html lang="ko">
-      <StyledComponentsRegistry>
-        <body>
+      <body>
+        <StyledComponentsRegistry>
           <Header/>
           {children}
-        </body>
-      </StyledComponentsRegistry>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
