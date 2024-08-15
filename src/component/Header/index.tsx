@@ -35,6 +35,7 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     justify-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #F0F0F0;
 `;
 
 export const SideContainer = styled.div`
@@ -55,6 +56,7 @@ export const Navs = styled.div`
     .nav {
         cursor: pointer;
         margin: auto;
+        color: black;
     }
 `;
 

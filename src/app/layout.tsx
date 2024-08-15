@@ -3,6 +3,7 @@ import StyledComponentsRegistry from '@/lib/registry';
 import React, {ReactNode} from 'react';
 import {Header} from '@/component';
 import '@/styles/reset.css';
+import Footer from '@/component/Footer';
 
 export const metadata: Metadata = {
   title: 'JobSkill',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Header/>
           {children}
+          <Footer/>
         </StyledComponentsRegistry>
       </body>
     </html>
