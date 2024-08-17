@@ -5,11 +5,11 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
     label: string
 }
 
-export default function Input({placeholder, label}: Props) {
+export default function Input(props: Props) {
   return (
     <LabelContainer>
-      {label}
-      <InputContainer placeholder={placeholder}></InputContainer>
+      {props.label}
+      <InputContainer {...props}></InputContainer>
     </LabelContainer>
   );
 }
