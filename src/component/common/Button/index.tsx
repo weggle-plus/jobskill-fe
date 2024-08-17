@@ -1,23 +1,23 @@
 import styled from 'styled-components';
-import {HTMLAttributes, ReactNode} from 'react';
+import {ButtonHTMLAttributes, HTMLAttributes, ReactNode} from 'react';
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
-    type: 'primary' | 'secondary';
+    variant: 'primary' | 'secondary';
 }
-export default function Button({children, type, onClick}: Props) {
+export default function Button({type, children, variant, onClick}: Props) {
   return (
-    <ButtonContainer type={type} onClick={onClick}>{children}</ButtonContainer>
+    <ButtonContainer type={type} variant={variant} onClick={onClick}>{children}</ButtonContainer>
   );
 }
 
-export const ButtonContainer = styled.button<{type: 'primary' | 'secondary'}>`
+export const ButtonContainer = styled.button<{variant: 'primary' | 'secondary'}>`
     min-width: 89px;
     padding: 8px 12px;
     border-radius: 6px;
-    color: ${({type}) => type === 'primary' ? '#fff' : '#596FF6'};
-    background-color: ${({type}) => type === 'primary' ? '#596FF6' : '#fff'};
-    border: ${({type}) => type === 'primary' ? 'none' : '1px solid #F0F0F0'};
+    color: ${({variant}) => variant === 'primary' ? '#fff' : '#596FF6'};
+    background-color: ${({variant}) => variant === 'primary' ? '#596FF6' : '#fff'};
+    border: ${({variant}) => variant === 'primary' ? 'none' : '1px solid #F0F0F0'};
     font-size: 14px;
     font-weight: 600;
 `;

@@ -27,6 +27,11 @@ footer, header, hgroup, main, menu, nav, section {
     display: none;
 }
 
+input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+}
+
 menu, ol, ul {
     list-style: none;
 }

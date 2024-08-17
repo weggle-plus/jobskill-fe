@@ -21,8 +21,8 @@ export default function Header() {
       </SideContainer>
 
       <SideButtons>
-        <Button type={'secondary'} onClick={() => router.push('/login')}>로그인/회원가입</Button>
-        <Button type={'primary'} onClick={() => router.push('/business')}>기업서비스</Button>
+        <Button variant={'secondary'} onClick={() => router.push('/login')}>로그인/회원가입</Button>
+        <Button variant={'primary'} onClick={() => router.push('/business')}>기업서비스</Button>
       </SideButtons>
     </HeaderContainer>
   );
