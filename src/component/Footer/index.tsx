@@ -1,22 +1,28 @@
 'use client';
 
 import styled from 'styled-components';
-import Image from 'next/image';
 import Link from 'next/link';
+import {HeadLine2} from '@/component';
 
 export default function Footer() {
   return (
-    <FooterContainer>
+    <footer>
       <FooterContent>
         <TopContainer>
-          <Image src={'/Logo.png'} alt={'로고'} width={158} height={60}/>
-          <Link href={'/help'}>
+          <div className={'top'}>
+            <HeadLine2>위글 플러스</HeadLine2>
+            <Link href={'/help'}>
             FAQ
-          </Link>
+            </Link>
+          </div>
+          <CompanyIntroduction>
+            <p>고객정보보호 책임자 오대호</p>
+            <p>
+              이메일&nbsp;
+              <a href="mailto:aswq27005308@gmail.com">aswq27005308@gmail.com</a>
+            </p>
+          </CompanyIntroduction>
         </TopContainer>
-        <CompanyIntroduction>
-        위글 플러스
-        </CompanyIntroduction>
         <BottomContainer>
           <Link href={'/terms'}>
               이용약관
@@ -25,28 +31,27 @@ export default function Footer() {
             개인정보 처리방침
           </Link>
         </BottomContainer>
+        <CopyLight>© 2021 WIGGLE. All rights reserved.</CopyLight>
       </FooterContent>
-    </FooterContainer>
+    </footer>
   );
 }
 
-export const FooterContainer = styled.footer`
-    min-height: 188px;
-`;
-
 export const FooterContent = styled.div`
-    padding: 50px 41px;
+    padding: 20px 40px;
     border-top: 1px solid #F0F0F0;
     display: flex;
-    gap: 46px;
+    gap: 20px;
     flex-direction: column;
 `;
 
 export const TopContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 300px;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 300px;
+    }
 
     a {
         color: #000;
@@ -54,7 +59,7 @@ export const TopContainer = styled.div`
         font-style: normal;
         font-weight: 600;
         line-height: 18px;
-    `;
+`;
 
 export const CompanyIntroduction = styled.div`
     color: #666;
@@ -62,6 +67,14 @@ export const CompanyIntroduction = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+  
+   a {
+     color: #666;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 18px;
+   }
 `;
 
 export const BottomContainer = styled.div`
@@ -70,9 +83,16 @@ export const BottomContainer = styled.div`
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    
-
+  
     a {
         color: #666666;
     }
+`;
+
+export const CopyLight = styled.p`
+  color: rgba(102, 102, 102, 0.40);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 `;
