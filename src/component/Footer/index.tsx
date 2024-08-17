@@ -7,29 +7,34 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <FooterContainer>
-      <TopContainer>
-        <Image src={'/Logo.png'} alt={'로고'} width={158} height={60}/>
-        <Link href={'/help'}>
+      <FooterContent>
+        <TopContainer>
+          <Image src={'/Logo.png'} alt={'로고'} width={158} height={60}/>
+          <Link href={'/help'}>
             FAQ
-        </Link>
-      </TopContainer>
-      <CompanyIntroduction>
+          </Link>
+        </TopContainer>
+        <CompanyIntroduction>
         위글 플러스
-      </CompanyIntroduction>
-      <BottomContainer>
-        <Link href={'/terms'}>
+        </CompanyIntroduction>
+        <BottomContainer>
+          <Link href={'/terms'}>
               이용약관
-        </Link>
-        <Link href={'/privacy'}>
+          </Link>
+          <Link href={'/privacy'}>
             개인정보 처리방침
-        </Link>
-      </BottomContainer>
+          </Link>
+        </BottomContainer>
+      </FooterContent>
     </FooterContainer>
   );
 }
 
 export const FooterContainer = styled.footer`
     min-height: 188px;
+`;
+
+export const FooterContent = styled.div`
     padding: 50px 41px;
     border-top: 1px solid #F0F0F0;
     display: flex;

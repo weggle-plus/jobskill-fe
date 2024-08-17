@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import {ReactNode} from 'react';
+import {HTMLAttributes, ReactNode} from 'react';
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
     type: 'primary' | 'secondary';
-    onClick?: () => void;
 }
 export default function Button({children, type, onClick}: Props) {
   return (

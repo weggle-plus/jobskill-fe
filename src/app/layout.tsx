@@ -1,8 +1,9 @@
 import type {Metadata} from 'next';
 import StyledComponentsRegistry from '@/lib/registry';
 import React, {ReactNode} from 'react';
-import {Header} from '@/component';
+import {Header, PageContainer} from '@/component';
 import '@/styles/reset.css';
+import '@/styles/global.css';
 import Footer from '@/component/Footer';
 
 export const metadata: Metadata = {
@@ -19,9 +20,11 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <StyledComponentsRegistry>
-          <Header/>
-          {children}
-          <Footer/>
+          <PageContainer>
+            <Header/>
+            {children}
+            <Footer/>
+          </PageContainer>
         </StyledComponentsRegistry>
       </body>
     </html>
