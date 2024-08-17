@@ -38,7 +38,7 @@ export default function Footer() {
 }
 
 export const FooterContent = styled.div`
-    padding: 20px 40px;
+    padding: 20px 200px;
     border-top: 1px solid #F0F0F0;
     display: flex;
     gap: 20px;

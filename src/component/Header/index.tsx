@@ -30,7 +30,7 @@ export default function Header() {
 
 export const HeaderContainer = styled.header`
     height: 60px;
-    padding-inline: 50px;
+    padding-inline: 200px;
     display: flex;
     flex-direction: row;
     justify-items: center;
