@@ -15,10 +15,10 @@ export default function Input(props: Props) {
 }
 
 const LabelContainer = styled.label`
+    width: 100%;
     display: inline-flex;
     flex-direction: column;
     gap: 8px;
-
     color: #000;
     font-size: 12px;
     font-style: normal;
