@@ -49,10 +49,10 @@ export default function SignUpForm() {
 
   const onSubmit = async (data, event) => {
     event.preventDefault();
-    // const requestBody = {
-    //   ...data,
-    //   isMarketingAgree: checkItems.includes('isMarketingAgree'),
-    // };
+    const requestBody = {
+      ...data,
+      isMarketingAgree: checkItems.includes('isMarketingAgree'),
+    };
     console.log('test');
     console.log(data);
     console.log(requestBody);
